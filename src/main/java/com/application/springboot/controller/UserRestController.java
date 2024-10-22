@@ -99,8 +99,9 @@ public class UserRestController {
 
   // POST /users/logout
   @PostMapping("/users/logout")
-  public void logout() {
+  public String logout() {
     // TODO
+    return "Logout successfully";
   }
 
   // PUT /users - update existing user except password

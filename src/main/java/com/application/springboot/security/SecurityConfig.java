@@ -80,6 +80,8 @@ public class SecurityConfig {
     http.cors(cors -> cors.disable());
     http.sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS)); // set session management to stateless
 
+    //http.logout(e -> e.logoutRequestMatcher(new AntPathRequestMatcher("/api/users/logout")).logoutSuccessUrl("/api/users/login"));
+
     return http.build();
   }
 }
